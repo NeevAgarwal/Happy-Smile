@@ -1,0 +1,6 @@
+{
+  "name": "Happy Smile Dental Clinic",
+  "description": "Production-ready website for Happy Smile Dental Clinic in Guwahati featuring modern design, SEO, and appointment booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

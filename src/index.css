@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #14B8A6; 
+  --color-primary-dark: #0D9488;
+  --color-secondary: #1E293B; 
+  --color-dark: #0F172A; 
+  
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-slate-300 bg-dark antialiased selection:bg-primary/20 selection:text-primary max-w-[100vw] overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-slate-50 font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(to bottom, #1E293B 0%, #0F172A 100%);
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .smooth-boundary {
+    border-radius: 40px;
+  }
+
+  .tooth-shape {
+    border-radius: 40px 40px 100px 100px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5); 
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #14B8A6; 
+    border-radius: 4px;
+  }
+}
+
