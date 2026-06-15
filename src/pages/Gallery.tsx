@@ -6,11 +6,11 @@ const categories = ['All', 'Clinic', 'Cosmetic', 'Orthodontics', 'Implants'];
 
 const galleryItems = [
   { id: 1, category: 'Clinic', image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Modern Equipment' },
-  { id: 2, category: 'Clinic', image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Waiting Area' },
-  { id: 3, category: 'Cosmetic', image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Smile Makeover' },
-  { id: 4, category: 'Orthodontics', image: 'https://images.unsplash.com/photo-1598256989467-85ef154da719?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Clear Aligners' },
-  { id: 5, category: 'Implants', image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Dental Implants' },
-  { id: 6, category: 'Cosmetic', image: 'https://images.unsplash.com/photo-1574482620826-40685ca5ebe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', title: 'Teeth Whitening' },
+  { id: 2, category: 'Clinic', image: '/waiting-area.jpg', title: 'Waiting Area' },
+  { id: 3, category: 'Cosmetic', image: '/smile-makeover.jpeg', title: 'Smile Makeover' },
+  { id: 4, category: 'Orthodontics', image: '/clear-aligners2.jpeg', title: 'Clear Aligners' },
+  { id: 5, category: 'Implants', image: '/dental-implant.jpeg', title: 'Dental Implants' },
+  { id: 6, category: 'Cosmetic', image: '/teeth-whitening.jpeg', title: 'Teeth Whitening' },
 ];
 
 export default function Gallery() {

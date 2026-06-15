@@ -1,6 +1,7 @@
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+import teethCleaningImage from '../assets/images/regenerated_image_1781527449175.webp';
 
 export const posts = [
   {
@@ -36,7 +37,7 @@ export const posts = [
     `,
     date: 'Sep 28, 2023',
     author: 'Dr. Das',
-    image: 'https://images.unsplash.com/photo-1598256989467-85ef154da719?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: teethCleaningImage,
     slug: 'teeth-cleaning-benefits'
   },
   {
