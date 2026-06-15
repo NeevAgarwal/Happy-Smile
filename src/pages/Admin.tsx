@@ -297,7 +297,7 @@ export default function Admin() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-700/50">
-                    {appointments.map((apt) => (
+                    {appointments.filter(apt => apt.status !== 'completed').map((apt) => (
                       <tr key={apt.id} className="hover:bg-slate-700/20 transition-colors">
                         <td className="px-6 py-4">
                           <div className="flex items-center space-x-3">
@@ -306,7 +306,6 @@ export default function Admin() {
                             </div>
                             <div>
                               <p className="font-bold text-white">{apt.name}</p>
-                              <p className="text-xs text-slate-500">ID: #{apt.id || '-'}</p>
                             </div>
                           </div>
                         </td>
