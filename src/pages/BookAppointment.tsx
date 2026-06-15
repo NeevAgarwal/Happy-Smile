@@ -49,7 +49,11 @@ export default function BookAppointment() {
       setStatus('success');
     } catch (error: any) {
       console.error(error);
-      setErrorMsg(error.message || 'Something went wrong. Please try again or call us directly.');
+      if (error.message && error.message.includes('row-level security')) {
+        setErrorMsg('Database Error: Go to Supabase -> Authentication -> Policies -> "appointments" table, and create a policy to enable "Insert" access for public/anon users.');
+      } else {
+        setErrorMsg(error.message || 'Something went wrong. Please try again or call us directly.');
+      }
       setStatus('error');
     }
   };

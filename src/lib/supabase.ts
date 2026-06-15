@@ -17,6 +17,7 @@ create table appointments (
   time text not null,
   treatment text,
   message text,
+  status text default 'pending',
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 

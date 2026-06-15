@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 import { Shield, Clock, Award, Users, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import teethWhiteningBefore from '../assets/images/regenerated_image_1781505664426.jpg';
+import teethWhiteningAfter from '../assets/images/regenerated_image_1781505665119.jpg';
+import veneersBefore from '../assets/images/regenerated_image_1781505971144.webp';
+import veneersAfter from '../assets/images/regenerated_image_1781505972307.webp';
+
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -248,13 +253,13 @@ export default function Home() {
             {[
               {
                 title: "Teeth Whitening & Cleaning",
-                before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                after: "https://images.unsplash.com/photo-1590626353267-28565e3860bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                before: teethWhiteningBefore,
+                after: teethWhiteningAfter
               },
               {
                 title: "Dental Veneers Makeover",
-                before: "https://images.unsplash.com/photo-1598256989467-85ef154da719?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                after: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                before: veneersBefore,
+                after: veneersAfter
               }
             ].map((item, idx) => (
               <motion.div 

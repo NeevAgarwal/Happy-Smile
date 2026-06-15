@@ -112,24 +112,53 @@ export default function Admin() {
         if (error) throw error;
       }
     } catch (err: any) {
-      setAuthError(err.message || 'Authentication failed');
+      if (err.message === 'Email not confirmed') {
+        setAuthError('Email not confirmed. To fix this: Go to your Supabase Dashboard -> Authentication -> Providers -> Email -> Turn OFF "Confirm email". Then try again.');
+      } else {
+        setAuthError(err.message || 'Authentication failed');
+      }
     } finally {
       setAuthLoading(false);
     }
   };
 
+  const [actionError, setActionError] = useState('');
+
   const handleLogout = async () => {
     await supabase.auth.signOut();
   };
 
+  const toggleStatus = async (id: string | number, currentStatus: string) => {
+    setActionError('');
+    const newStatus = currentStatus === 'completed' ? 'pending' : 'completed';
+    try {
+      const { error } = await supabase
+        .from('appointments')
+        .update({ status: newStatus })
+        .eq('id', id);
+      
+      if (error) throw error;
+      fetchAppointments();
+    } catch (err: any) {
+      console.error("Error updating status:", err);
+      if (err.message && err.message.toLowerCase().includes('status')) {
+         setActionError("Database Error: Go to Supabase -> SQL Editor and run: ALTER TABLE appointments ADD COLUMN status text DEFAULT 'pending';");
+      } else {
+         setActionError(err.message || "Failed to update appointment status.");
+      }
+    }
+  };
+
   const handleDelete = async (id: string | number) => {
     if (!window.confirm("Are you sure you want to delete this booking?")) return;
+    setActionError('');
     try {
       const { error } = await supabase.from('appointments').delete().eq('id', id);
       if (error) throw error;
       fetchAppointments();
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error deleting appointment:", err);
+      setActionError(err.message || "Failed to delete appointment.");
     }
   };
 
@@ -241,6 +270,13 @@ export default function Admin() {
             <p className="text-slate-400">Manage and view all incoming appointment requests.</p>
           </div>
 
+          {actionError && (
+            <div className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 rounded-lg mb-6 flex items-start">
+              <AlertCircle className="w-5 h-5 mr-3 shrink-0 mt-0.5" />
+              <div className="text-sm whitespace-pre-wrap">{actionError}</div>
+            </div>
+          )}
+
           <div className="bg-slate-800 rounded-2xl border border-slate-700 shadow-xl overflow-hidden">
             {appointments.length === 0 ? (
               <div className="p-12 text-center text-slate-400">
@@ -256,6 +292,7 @@ export default function Admin() {
                       <th className="px-6 py-4 text-sm font-semibold text-slate-300">Contact</th>
                       <th className="px-6 py-4 text-sm font-semibold text-slate-300">Treatment</th>
                       <th className="px-6 py-4 text-sm font-semibold text-slate-300">Requested Time</th>
+                      <th className="px-6 py-4 text-sm font-semibold text-slate-300">Status</th>
                       <th className="px-6 py-4 text-sm font-semibold text-slate-300 text-right">Actions</th>
                     </tr>
                   </thead>
@@ -308,6 +345,24 @@ export default function Admin() {
                               {apt.time}
                             </div>
                           </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <label className="flex items-center space-x-3 cursor-pointer group">
+                            <div className="relative flex items-center justify-center">
+                              <input 
+                                type="checkbox" 
+                                className="peer sr-only" 
+                                checked={apt.status === 'completed'}
+                                onChange={() => toggleStatus(apt.id, apt.status)}
+                              />
+                              <div className="w-6 h-6 rounded border-2 border-slate-600 bg-slate-800 peer-checked:bg-green-500 peer-checked:border-green-500 transition-colors flex items-center justify-center">
+                                <CheckCircle className="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" />
+                              </div>
+                            </div>
+                            <span className={`text-sm font-medium ${apt.status === 'completed' ? 'text-green-400' : 'text-slate-400'}`}>
+                              {apt.status === 'completed' ? 'Done' : 'Pending'}
+                            </span>
+                          </label>
                         </td>
                         <td className="px-6 py-4 text-right">
                           <button 
