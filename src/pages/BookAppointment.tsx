@@ -46,6 +46,17 @@ export default function BookAppointment() {
         throw error;
       }
 
+      // Trigger email notification (fire-and-forget or wait)
+      try {
+        await fetch('/api/notify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (notifyErr) {
+        console.error("Failed to trigger email notification", notifyErr);
+      }
+
       setStatus('success');
     } catch (error: any) {
       console.error(error);
