@@ -163,7 +163,7 @@ export default function Home() {
             {[
               { title: 'Dental Checkup', desc: 'Comprehensive oral examinations and diagnosis using modern technology.', image: '/free-dental-check-up-service.jpg' },
               { title: 'Root Canal', desc: 'Pain-free root canal treatments to save infected or severely decayed teeth.', image: '/Root-Canal-Treatment-2x-1.jpg' },
-              { title: 'Dental Implants', desc: 'Permanent solution for missing teeth restoring function and aesthetics.', image: '/dental implant.jpeg' },
+              { title: 'Dental Implants', desc: 'Permanent solution for missing teeth restoring function and aesthetics.', image: '/dental-implant.jpeg' },
             ].map((service, idx) => (
               <motion.div 
                 key={idx}
