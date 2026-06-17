@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import teethWhiteningBefore from '../assets/images/regenerated_image_1781505664426.jpg';
 import teethWhiteningAfter from '../assets/images/regenerated_image_1781505665119.jpg';
-import veneersBefore from '../assets/images/regenerated_image_1781505971144.webp';
-import veneersAfter from '../assets/images/regenerated_image_1781505972307.webp';
+import veneersBefore from '../assets/images/regenerated_image_1781662769860.jpg';
+import veneersAfter from '../assets/images/regenerated_image_1781662772212.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
