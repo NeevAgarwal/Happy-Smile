@@ -271,8 +271,8 @@ export default function Home() {
                 className="bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 p-2 relative group"
               >
                 <div className="flex flex-col sm:flex-row relative">
-                  <div className="relative w-full sm:w-1/2 overflow-hidden rounded-l-2xl sm:rounded-l-2xl sm:rounded-tr-none rounded-t-2xl sm:rounded-bl-2xl opacity-60 grayscale-[50%] hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                    <img src={item.before} alt="Before" className="w-full h-48 sm:h-64 object-cover" />
+                  <div className="relative w-full sm:w-1/2 overflow-hidden rounded-l-2xl sm:rounded-l-2xl sm:rounded-tr-none rounded-t-2xl sm:rounded-bl-2xl">
+                    <img src={item.before} alt="Before" className="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full border border-slate-700">Before</div>
                   </div>
                   <div className="h-1 sm:w-1 bg-slate-900 z-10 hidden sm:block"></div>
