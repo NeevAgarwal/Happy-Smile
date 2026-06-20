@@ -26,8 +26,8 @@ export function Footer() {
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <defs>
                     <linearGradient id="gradient-logo-footer" x1="4" y1="4" x2="44" y2="44">
-                      <stop stopColor="#0ea5e9" />
-                      <stop offset="1" stopColor="#0369a1" />
+                      <stop stopColor="#ffffff" />
+                      <stop offset="1" stopColor="#e2e8f0" />
                     </linearGradient>
                     <linearGradient id="gradient-sparkle-footer" x1="30" y1="4" x2="44" y2="18">
                       <stop stopColor="#fef08a" />
