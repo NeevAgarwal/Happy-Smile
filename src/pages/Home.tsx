@@ -7,6 +7,10 @@ import teethWhiteningBefore from '../assets/images/regenerated_image_17815056644
 import teethWhiteningAfter from '../assets/images/regenerated_image_1781505665119.jpg';
 import veneersBefore from '../assets/images/regenerated_image_1781662769860.jpg';
 import veneersAfter from '../assets/images/regenerated_image_1781662772212.jpg';
+import stainRemovalBefore from '../assets/images/regenerated_image_1781933193523.jpg';
+import stainRemovalAfter from '../assets/images/regenerated_image_1781933317697.jpg';
+import smileCorrectionBefore from '../assets/images/regenerated_image_1781933314549.jpg';
+import smileCorrectionAfter from '../assets/images/regenerated_image_1781933316155.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -263,13 +267,13 @@ export default function Home() {
               },
               {
                 title: "Stain Removal",
-                before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                after: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                before: stainRemovalBefore,
+                after: stainRemovalAfter
               },
               {
                 title: "Smile Correction",
-                before: "https://images.unsplash.com/photo-1598256989467-85ef154da719?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                after: "https://images.unsplash.com/photo-1574482620826-40685ca5ebe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                before: smileCorrectionBefore,
+                after: smileCorrectionAfter
               }
             ].map((item, idx) => (
               <motion.div 
