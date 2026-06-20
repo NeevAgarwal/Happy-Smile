@@ -1,0 +1,16 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient-logo-nav" x1="4" y1="4" x2="44" y2="44">
+      <stop stopColor="#e0f2fe" />
+      <stop offset="1" stopColor="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="gradient-sparkle-nav" x1="30" y1="4" x2="44" y2="18">
+      <stop stopColor="#fef08a" />
+      <stop offset="1" stopColor="#f59e0b" />
+    </linearGradient>
+  </defs>
+  
+  <path d="M24 10C16 10 10 15 10 22C10 26.5 12 28.5 13.5 33C14.5 36 15 40 18 40C21.5 40 22.5 35 24 32C25.5 35 26.5 40 30 40C33 40 33.5 36 34.5 33C36 28.5 38 26.5 38 22C38 15 32 10 24 10Z" fill="url(#gradient-logo-nav)" />
+  <path d="M16 23C16 23 20 27 24 27C28 27 32 23 32 23" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M36 12L39 7L42 12L47 15L42 18L39 23L36 18L31 15L36 12Z" fill="url(#gradient-sparkle-nav)" />
+</svg>
