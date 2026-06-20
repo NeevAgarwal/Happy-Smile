@@ -260,6 +260,16 @@ export default function Home() {
                 title: "Dental Veneers Makeover",
                 before: veneersBefore,
                 after: veneersAfter
+              },
+              {
+                title: "Stain Removal",
+                before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                after: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              },
+              {
+                title: "Smile Correction",
+                before: "https://images.unsplash.com/photo-1598256989467-85ef154da719?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                after: "https://images.unsplash.com/photo-1574482620826-40685ca5ebe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
               }
             ].map((item, idx) => (
               <motion.div 
