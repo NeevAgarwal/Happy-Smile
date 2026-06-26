@@ -11,6 +11,7 @@ import stainRemovalBefore from '../assets/images/regenerated_image_1781933193523
 import stainRemovalAfter from '../assets/images/regenerated_image_1781933317697.jpg';
 import smileCorrectionBefore from '../assets/images/regenerated_image_1781933314549.jpg';
 import smileCorrectionAfter from '../assets/images/regenerated_image_1781933316155.jpg';
+import doctorImage from '../assets/images/doctor.jpg';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -114,7 +115,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 bg-blue-400/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
                 
                 <div className="w-32 h-40 sm:w-56 sm:h-64 tooth-shape overflow-hidden border-4 border-slate-700/80 mb-4 sm:mb-6 relative z-10 shadow-lg shrink-0">
-                  <img src="/doctor.webp" alt="Dr. Hirakjyoti Goswami" className="w-full h-full object-cover object-top" />
+                  <img src={doctorImage} alt="Dr. Hirakjyoti Goswami" className="w-full h-full object-cover object-top" />
                 </div>
                 
                 <div className="relative z-10 w-full">
