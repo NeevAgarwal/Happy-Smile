@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🦷 Happy Smile Dental Clinic
 
-# Run and deploy your AI Studio app
+A modern, responsive website for Happy Smile Dental Clinic, designed to showcase dental services, provide clinic information, and simplify appointment requests.
 
-This contains everything you need to run your app locally.
+🌐 **Live Website:** [happysmileclinic.site](https://www.happysmileclinic.site/)
 
-View your app in AI Studio: https://ai.studio/apps/47cd1f46-3366-4665-9c3a-defb4efe2db4
+## ✨ Features
+- Responsive and modern UI
+- Dental services and clinic information
+- Appointment request form
+- Admin dashboard for appointment management
+- Gallery, testimonials, and dental health blog
+- WhatsApp and contact integration
+- SEO-friendly metadata and smooth animations
 
-## Run Locally
+## 🛠️ Tech Stack
+- **Frontend:** React, TypeScript, Tailwind CSS, Vite
+- **Routing & UI:** React Router, Framer Motion, Lucide React
+- **Backend:** Express.js, Supabase
+- **Email:** Nodemailer
 
-**Prerequisites:**  Node.js
+## 🚀 Getting Started
 
+```bash
+git clone https://github.com/NeevAgarwal/Happy-Smile.git
+cd Happy-Smile
+npm install
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Configure the required Supabase and email environment variables before testing backend functionality.
+
+## 👨‍💻 Author
+**Neev Agarwal** · [GitHub](https://github.com/NeevAgarwal)
+
+*Built with AI-assisted development and modern web technologies.*
